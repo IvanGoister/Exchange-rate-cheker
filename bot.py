@@ -41,8 +41,8 @@ def welcome(message):
         for button in buttons:
             item=types.KeyboardButton(button)
             markup.add(item)
-        return(markup())
-    Keyboard()
+        return(markup)
+    markup=Keyboard()
     bot.send_message(message.chat.id, "Тестовий бот перевірки курсу валют".format(message.from_user, bot.get_me()),parse_mode='html', reply_markup=markup)
 
 @bot.message_handler(content_types=['text'])
